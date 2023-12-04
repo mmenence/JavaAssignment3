@@ -1,4 +1,5 @@
 import com.example.java_assignment_3.ColourTable;
+import javafx.scene.paint.Color;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -30,7 +31,7 @@ public class ColourTableTests {
         int colourTableInput = 4;
         ColourTable colourTable = new ColourTable(colourTableInput);
         colourTable.AddColour(124, 32, 54);
-        Assertions.assertTrue((colourTable.PaletteColours.get(0).get(0).equals(124) ) && ( colourTable.PaletteColours.get(0).get(1).equals(32)) && (colourTable.PaletteColours.get(0).get(2).equals(54)));
+        Assertions.assertEquals(colourTable.PaletteColours.get(0), Color.rgb(124,32,54), "Colour in table does not match the iputs given");
 
     }
 }
