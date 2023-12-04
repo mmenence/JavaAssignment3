@@ -1,11 +1,11 @@
 import com.example.java_assignment_3.ColourTable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import java.util.Arrays;
+
 
 public class ColourTableTests {
     @Test
-    public void ColourTable(){
+    public void ColourTable() throws Exception {
 
 
         int colourTableInput = 2;
@@ -16,11 +16,11 @@ public class ColourTableTests {
     }
 
     @Test
-    public void ColourTableInputRestrictionTests(){
-        int colourTableInput = 5;
+    public void ColourTableInputRestrictionTests() throws Exception {
+        int colourTableInput = 4;
         ColourTable colourTable = new ColourTable(colourTableInput);
 
-        Assertions.assertTrue( colourTableInput >= colourTable.noOfPalleteColours && colourTable.noOfPalleteColours < 1025, "Input is not a power of two or is greater than 1204");
+        Assertions.assertTrue( colourTableInput == colourTable.noOfPalleteColours && colourTable.noOfPalleteColours < 1025, "Input is not a power of two or is greater than 1204");
 
     }
 }
