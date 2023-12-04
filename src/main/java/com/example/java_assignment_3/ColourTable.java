@@ -1,10 +1,16 @@
 package com.example.java_assignment_3;
 
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ColourTable {
 
 
-    public int noOfPalleteColours;
+    public int noOfPaletteColours;
+    public List<ArrayList> PaletteColours = new ArrayList<>();
 
     /**
      * Constructor class for the class ColourTable
@@ -21,9 +27,11 @@ public class ColourTable {
             }
             throw new Exception("input not a valid number");
         }
-        noOfPalleteColours = noOfColours;
+        noOfPaletteColours = noOfColours;
 
-
+        PaletteColours = new ArrayList<>(noOfPaletteColours);
 
     }
+
+
 }
