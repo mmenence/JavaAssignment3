@@ -25,7 +25,9 @@ public class ColourTable {
             if (powerArray[i] == noOfColours) {
                 break;
             }
-            throw new Exception("input not a valid number");
+            else if (i == powerArray.length - 1) {
+                throw new Exception("input not a valid number");
+            }
         }
         noOfPaletteColours = noOfColours;
 
@@ -33,5 +35,12 @@ public class ColourTable {
 
     }
 
+    public void AddColour(int redValue, int greenValue, int blueValue){
+        ArrayList<Integer> addedColour = new ArrayList<Integer>(3);
+        addedColour.add(redValue);
+        addedColour.add(greenValue);
+        addedColour.add(blueValue);
 
+        PaletteColours.add(addedColour);
+    }
 }

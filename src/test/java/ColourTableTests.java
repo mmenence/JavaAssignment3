@@ -17,7 +17,7 @@ public class ColourTableTests {
 
     @Test
     public void ColourTableInputRestrictionTests() throws Exception {
-        int colourTableInput = 4;
+        int colourTableInput = 8;
         ColourTable colourTable = new ColourTable(colourTableInput);
 
         Assertions.assertTrue( colourTableInput == colourTable.noOfPaletteColours && colourTable.noOfPaletteColours < 1025, "Input is not a power of two or is greater than 1204");
@@ -30,6 +30,8 @@ public class ColourTableTests {
         int colourTableInput = 4;
         ColourTable colourTable = new ColourTable(colourTableInput);
         colourTable.AddColour(124, 32, 54);
-        Assertions.assertEquals(colourTable.PaletteColours.get(0).get(0) = 124, colourTable.PaletteColours.get(0).get(0) = 32, colourTable.PaletteColours.get(0).get(0) = 54);
+        Assertions.assertTrue((colourTable.PaletteColours.get(0).get(0).equals(124) ) && ( colourTable.PaletteColours.get(0).get(1).equals(32)) && (colourTable.PaletteColours.get(0).get(2).equals(54)));
+
     }
 }
+
