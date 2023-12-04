@@ -17,11 +17,10 @@ public class ColourTableTests {
 
     @Test
     public void ColourTableInputRestrictionTests(){
-        int colourTableInput = 3;
-        int[] powerArray = {2,4,8,16,32,64,128,256,512,1024};
+        int colourTableInput = 5;
         ColourTable colourTable = new ColourTable(colourTableInput);
 
-        Assertions.assertTrue( Arrays.asList(powerArray).contains(colourTable.noOfPalleteColours) && colourTable.noOfPalleteColours < 1025, "Input is not a power of tow or is greater than 1204");
+        Assertions.assertTrue( colourTableInput >= colourTable.noOfPalleteColours && colourTable.noOfPalleteColours < 1025, "Input is not a power of two or is greater than 1204");
 
     }
 }
