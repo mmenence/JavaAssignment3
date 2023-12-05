@@ -5,6 +5,11 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Class that creates and maintains a palette of colours
+ *
+ */
 public class ColourTable {
 
 
@@ -12,9 +17,10 @@ public class ColourTable {
     public List<Color> PaletteColours;
 
     /**
-     * Constructor class for the class ColourTable
+     * Class constructor for the class ColourTable
      *
      * @param noOfColours the number of colours allowed to be in the palette (specifies the number of elements allowed in the colour lookup table), must be a power of two and below 1025.
+     * @throws Exception if input is not valid
      */
     public ColourTable(int noOfColours) throws Exception {
 
@@ -36,12 +42,13 @@ public class ColourTable {
 
 
     /**
-     * Class to add a colour to the colour palette, added as three ints between 0 and 255 signifying RGB values
+     * Method to add a colour to the colour palette, added as three ints between 0 and 255 signifying RGB values
      * added to Array as "Color" object
      *
      * @param redValue An integer between 0 and 255 representing the red value in the colour
      * @param greenValue An integer between 0 and 255 representing the green value in the colour
      * @param blueValue An integer between 0 and 255 representing the blue value in the colour
+     * @throws Exception if variables are out of bounds or no more room in palette
      */
     public void AddColour(int redValue, int greenValue, int blueValue) throws Exception {
 
